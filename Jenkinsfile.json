@@ -6,25 +6,25 @@ pipeline{
  maven 'Maven 3.9.4'
 }
 
-stages{
-  stage('build'){
+ stages{
+   stage('build'){
      steps{
       sh 'mvn compile'
-  }
-}
+      }
+   }
 
-stages{
-  stage('test'){
+   stage('test'){
      steps{
       sh 'mvn clean test'
-  }
-}
+      }
+   }
 
-stages{
-  stage('package'){
+
+   stage('package'){
      steps{
       sh 'package -DskipTests'
        }
-    }
+   }
  }
+
 }
