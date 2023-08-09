@@ -7,6 +7,12 @@ pipeline {
       }
     }
 
+    stage('test') {
+      steps {
+        sh 'mvn clean test'
+      }
+    }
+
   }
   environment {
     tools = 'Maven 3.9.4'
