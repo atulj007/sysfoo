@@ -8,4 +8,7 @@ pipeline {
     }
 
   }
+  environment {
+    tools = 'Maven 3.9.4'
+  }
 }
