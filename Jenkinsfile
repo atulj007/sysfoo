@@ -13,6 +13,12 @@ pipeline {
       }
     }
 
+    stage('package') {
+      steps {
+        sh 'mvn package -DskiptTest'
+      }
+    }
+
   }
   environment {
     tools = 'Maven 3.9.4'
